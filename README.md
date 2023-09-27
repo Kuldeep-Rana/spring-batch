@@ -37,7 +37,7 @@ I am running postgresdb locally with docker. The DockerFiile is here https://git
  docker run -d --name my-postgres-container -p 5432:5432 my-postgres-image
 ```
 
-# Spring Batch relies on several database tables to manage the state and metadata of batch jobs and their steps. These tables help Spring Batch maintain information about job executions, job parameters, step executions, and more. Below, I'll explain the key tables used by Spring Batch one by one:
+Spring Batch relies on several database tables to manage the state and metadata of batch jobs and their steps. These tables help Spring Batch maintain information about job executions, job parameters, step executions, and more. Below, I'll explain the key tables used by Spring Batch one by one:
 * BATCH_JOB_INSTANCE: This table stores information about each unique job that has been executed. A job instance is a logical job run and is identified by a unique JOB_INSTANCE_ID.
 
 * BATCH_JOB_EXECUTION: This table maintains records of each execution of a job instance. Each execution of a job is identified by a unique JOB_EXECUTION_ID.
@@ -50,9 +50,9 @@ I am running postgresdb locally with docker. The DockerFiile is here https://git
 
 * BATCH_EXECUTION_EXECUTION_CONTEXT: This table stores serialized context information associated with each job execution.
 
- https://github.com/Kuldeep-Rana/spring-batch/blob/main/spring-batch-tables.PNG
+ ![Spring batch config tables](https://github.com/Kuldeep-Rana/spring-batch/blob/main/spring-batch-tables.PNG)
 
-# In this example https://github.com/Kuldeep-Rana/spring-batch/tree/main/spring-batch-2 I have shown how we can launch a job using Rest API, JobLauncher and Job. We can also supply the Job parameters using Rest API. One of the main points to remember here is to disable the auto batch job using following property.  
+In this example https://github.com/Kuldeep-Rana/spring-batch/tree/main/spring-batch-2 I have shown how we can launch a job using Rest API, JobLauncher and Job. We can also supply the Job parameters using Rest API. One of the main points to remember here is to disable the auto batch job using following property.  
 
 ``` spring.batch.job.enabled=false ```
 
