@@ -31,6 +31,12 @@ Here are some fundamental concepts and components of Spring Batch:
 
 Spring Batch simplifies common batch processing challenges, such as handling large datasets, error handling, and transaction management. It is widely used in various industries for tasks like ETL (Extract, Transform, Load), report generation, and data synchronization.
 
+I am running postgresdb locally with docker. The DockerFiile is here https://github.com/Kuldeep-Rana/spring-batch/blob/main/DockerFile. Run the following commands to run. 
+```
+ docker build -t my-postgres-image .
+ docker run -d --name my-postgres-container -p 5432:5432 my-postgres-image
+```
+
 In this example https://github.com/Kuldeep-Rana/spring-batch/tree/main/spring-batch-2 I have shown how we can launch a job using Rest API, JobLauncher and Job. We can also supply the Job parameters using Rest API. One of the main points to remember here is to disable the auto batch job using following property.  
 
 ``` spring.batch.job.enabled=false ```
