@@ -1,0 +1,2 @@
+In this example I have used partitioning and chunk based processing using a
+custom [field mapper](src/main/java/com/example/batch/mappr/PersonFieldMapper.java) to handle the case where I have to parse date in string format to LocalDate.

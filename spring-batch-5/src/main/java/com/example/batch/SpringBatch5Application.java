@@ -4,7 +4,6 @@ import org.springframework.batch.core.configuration.annotation.EnableBatchProces
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 
 import javax.persistence.EntityManagerFactory;
 
@@ -18,12 +17,6 @@ public class SpringBatch5Application {
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(SpringBatch5Application.class, args);
-		var entityManagerFactory = context.getBean(EntityManagerFactory.class);
 	}
 
-	/*@Bean
-	public EntityManagerFactory localEntityManagerFactory(ApplicationContext applicationContext){
-		return applicationContext.getBean(EntityManagerFactory.class);
-
-	}*/
 }

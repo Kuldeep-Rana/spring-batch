@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -18,7 +19,8 @@ public class Person {
     private long id;
     private String name;
     private String email;
-    private String dob;
+
+    private LocalDate dob;
     private String phone;
     private String address;
     private boolean isProcessed;
